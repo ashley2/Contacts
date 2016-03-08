@@ -15,38 +15,12 @@ app.use(morgan('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('public'));
+app.use('/contacts', require('./routes'))
 
 app.get('/', function(req, res) {
   var indexPath = path.join(__dirname, 'index.html');
   res.sendFile(indexPath);
 })
-
-app.get('/contacts',function(req, res){
-  Contacts.read(function (err, contacts){
-    if(err){
-      return res.status(400).send(err);
-    }
-    res.send(contacts);
-  })
-})
-
-
-app.post('contacts',function(req, res){
-  Contacts.read(function (err, contacts){
-    if(err){
-      return res.status(400).send(err);
-    }
-    var newContacts = req.body;
-    contacts.push(newContacts);
-
-    Contacts.write(contacts, function(err){
-      if(err){
-      return res.status(400).send(err);
-    }
-      res.send();
-    });
-  });
-});
 
 
 
