@@ -17,10 +17,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('public'));
 app.use('/contacts', require('./routes'))
 
-app.get('/', function(req, res) {
-  var indexPath = path.join(__dirname, 'index.html');
-  res.sendFile(indexPath);
-})
+// app.get('/', function(req, res) {
+//   var indexPath = path.join(__dirname, 'index.html');
+//   res.sendFile(indexPath);
+// })
 
 
 

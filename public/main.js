@@ -11,9 +11,7 @@ app.controller('mainCtrl', function($scope, $http){
     $scope.contacts.push(contact);
     $scope.newContact = {} //clears out all the inputs
 
-    $http({
-      url: '/contacts'
-    })
+    $http.post('/contacts/addContact')
     .then(function(res){
       console.log('res', res)
     }, function(err) {
