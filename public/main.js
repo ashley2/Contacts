@@ -37,17 +37,16 @@ app.controller('mainCtrl', function($scope, $http){
   $scope.editIndex = null
 
   $scope.updateContact = function(index){
-   $scope.editIndex = $index
+   $scope.editIndex = index
  }
 
- $scope.editInfo = function(){
-  $scope.editContact
-  $scope.editIndex 
-  $scope.contacts
+ $scope.enterInfo = function(){
+  console.log('click')
+  $scope.contacts[$scope.editIndex] =  $scope.editContact
 
- }
+}
 
- $scope.deleteContact = function(index){
+$scope.deleteContact = function(index){
 
   $scope.contacts.splice(index, 1);
   $http.delete(`/contacts/delete/{index}`)
