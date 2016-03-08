@@ -11,9 +11,12 @@ app.controller('mainCtrl', function($scope, $http){
     $scope.contacts.push(contact);
     $scope.newContact = {} //clears out all the inputs
 
-    $http.post('/contacts/addContact')
+    // var obj = { $scope.contacts.name, $scope.contact.phoneNum, $scope.contact.email }
+
+    $http.post('/contacts/addContact', $scope.contacts )
     .then(function(res){
-      console.log('res', res)
+     
+      console.log($scope.contacts)
     }, function(err) {
       console.error(err);
     });
