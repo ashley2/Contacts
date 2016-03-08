@@ -35,22 +35,20 @@ app.controller('mainCtrl', function($scope, $http){
     
   }
 
+  $scope.updateContact = function(index){
+      console.log(index);
+  }
+
   $scope.deleteContact = function(index){
+    console.log(index)
     $scope.contacts.splice(index, 1);
+    $http.delete(`/contacts/delete/{index}`)
+    .then(function(res){
 
- // $scope.deleteContact = function(contact){
- //                var index = $scope.contacts.indexOf(this.contact);
- //                $scope.contacts.splice(this.$index, 1);  //scope.contacts is the array of contacts **going to need to send this to the backend
-
-
- $http.delete(`/contacts/delete/{index}`)
- .then(function(res){
-
-
- }, function(err){
-  console.error(err);
-});
-}
+    }, function(err){
+      console.error(err);
+    });
+  }
 });
 
 
