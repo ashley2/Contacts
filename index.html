@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact List</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <script src="main.js"></script>
+
+</head>
+<body ng-app="myApp" ng-controller="mainCtrl">
+
+  <div id="header">____'s Contacts</div>
+  <div class="container">
+
+
+    <input type="text" placeholder="Name" ng-model="newContact.name">
+    <input type="number" placeholder="Phone" ng-model="newContact.phoneNum">
+    <input type="email" placeholder="Email" ng-model="newContact.email">
+    <button ng-click="addContact()">Add Contact</button>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Phone Number</th>
+          <th>Email</th>
+          <th>Delete</th>
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="contact in contacts track by $index">
+          <td>{{contact.name}}</td>
+          <td>{{contact.phoneNum}}</td>
+          <td>{{contact.email}}</td>
+          <td>
+            <button ng-click="updateContact(index)"></button>
+          </td>
+          <td>
+            <button ng-click="deleteContact(index)" class="btn btn-danger btn sm">
+              <span class="glyphicon glyphicon-remove "></span>
+            </button>
+          </td>
+        </tr>
+        <tr ng-repeat="contact in contacts track by $index">
+          <input type="text" placeholder="Name">
+          <input type="number" placeholder="Number">
+          <input type="email" placeholder="Email">
+        </tr>
+      </tbody>
+    </table>  
+    <hr>
+
+
+  </div>
+
+
+</body>
+</html>
