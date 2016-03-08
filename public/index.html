@@ -38,11 +38,11 @@
           <td>{{contact.phoneNum}}</td>
           <td>{{contact.email}}</td>
           <td>
-          <button ng-click="updateContact(index)" data-toggle="modal" data-target="#myModal">Edit</button>
+          <button ng-click="updateContact($index)" data-toggle="modal" data-target="#myModal">Edit</button>
         </td>
         <td>
-          <button ng-click="deleteContact(index)" class="btn btn-danger btn sm">
-            <span class="glyphicon glyphicon-remove "></span>
+          <button ng-click="deleteContact($index)" class="btn btn-danger btn sm">
+            <span class="glyphicon glyphicon-remove"></span>
           </button>
         </td>
       </tr>
