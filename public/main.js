@@ -41,9 +41,15 @@ app.controller('mainCtrl', function($scope, $http){
  }
 
  $scope.enterInfo = function(){
-  console.log('click')
   $scope.contacts[$scope.editIndex] =  $scope.editContact
 
+  $http.put('/contacts/update/', $scope.contacts)
+  .then(function(res){
+    $scope.contacts = res.data
+
+  }, function(err){
+    console.error(err);
+  });  
 }
 
 $scope.deleteContact = function(index){
