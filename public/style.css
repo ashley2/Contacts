@@ -1,0 +1,121 @@
+* {
+  font-family: 'Raleway', sans-serif;
+}
+
+#header {
+  font-size: 40px;
+  text-align: center;
+  margin-top:100px;
+  margin-bottom: 50px;
+}
+
+
+.container{
+  text-align: center;
+}
+
+.inputContainer {
+  margin-bottom: 30px;
+}
+
+th {
+  text-align: center;
+  font-size: 15px; 
+}
+
+.table {
+  box-shadow: 10px 10px 5px gray;
+}
+
+input {
+  margin: 10px;
+  text-align: center;
+  border-radius: 10px;
+}
+input:focus {
+  outline: none;
+}
+
+
+#update {
+  color: #fff;
+  height: 40px;
+  width: 70px;
+  text-shadow: -2px 2px #346392;
+  background-color: #800080;
+  background-image: linear-gradient(top, #6496c8, #346392);
+  box-shadow: inset 0 0 0 1px #27496d;
+  border: none;
+  border-radius: 15px;
+}
+
+#update:hover,
+#update.hover {
+  box-shadow: inset 0 0 0 1px #27496d,0 5px 15px #193047;
+}
+
+#update:active,
+#update.active {
+  box-shadow: inset 0 0 0 1px #27496d,inset 0 5px 30px #193047;
+}
+
+#update:focus {
+  outline: none;
+}
+
+#delete {
+  color: #fff;
+  height: 40px;
+  width: 70px;
+  text-shadow: -2px 2px #346392;
+  background-color: #ff0000;
+  background-image: linear-gradient(top, #6496c8, #346392);
+  box-shadow: inset 0 0 0 1px #27496d;
+  border: none;
+  border-radius: 15px;
+}
+
+#delete:hover,
+#delete.hover {
+  box-shadow: inset 0 0 0 1px #27496d,0 5px 15px #193047;
+}
+
+#delete:active,
+#delete.active {
+  box-shadow: inset 0 0 0 1px #27496d,inset 0 5px 30px #193047;
+}
+
+#delete:focus {
+  outline: none
+}
+
+#add {
+  color: #fff;
+  height: 40px;
+  width: 120px;
+  text-shadow: -2px 2px #346392;
+  background-color: #004080;
+  background-image: linear-gradient(top, #6496c8, #346392);
+  box-shadow: inset 0 0 0 1px #27496d;
+  border: none;
+  border-radius: 15px;
+}
+
+#add:hover,
+#add.hover {
+  box-shadow: inset 0 0 0 1px #27496d,0 5px 15px #193047;
+}
+
+#add:active,
+#add.active {
+  box-shadow: inset 0 0 0 1px #27496d,inset 0 5px 30px #193047;
+}
+
+#add:focus {
+  outline: none
+}
+
+
+
+
+
