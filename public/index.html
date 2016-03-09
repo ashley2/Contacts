@@ -18,7 +18,7 @@
 
     <input type="text" placeholder="Name" ng-model="newContact.name">
     <input type="number" placeholder="Phone" ng-model="newContact.phoneNum">
-    <input type="email" placeholder="Email" ng-model="newContact.email">
+    <input type="email" placeholder="Email" ng-model="newContact.email" value="word@word">
     <button ng-click="addContact()">Add Contact</button>
 
     <table class="table">
@@ -61,9 +61,9 @@
           <h4 class="modal-title">Update Contact</h4>
         </div>
         <div class="modal-body">
-          <input type="name" placeholder="Name" ng-model="editContact.name">
-          <input type="number" placeholder="Number" ng-model="editContact.phoneNum">
-          <input type="email" placeholder="Email" ng-model="editContact.email">
+          <input value="{{contacts[editIndex].name}}"type="name" placeholder="Name" ng-model="editContact.name">
+          <input value="{{contacts[editIndex].phoneNum}}"type="number" placeholder="Number" ng-model="editContact.phoneNum">
+          <input value="{{contacts[editIndex].email}}"type="email" placeholder="Email" ng-model="editContact.email">
         </div>
         <div class="modal-footer">
           <button type="button" ng-click="enterInfo()"class="btn btn-default" data-dismiss="modal">Submit</button>
